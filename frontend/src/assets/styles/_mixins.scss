@@ -1,0 +1,31 @@
+@mixin flex-ac {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin object-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin content-1 {
+  background-color: $gray-1;
+  padding: $padding-md;
+  border-radius: 0.5rem;
+}
+
+@function tint($color, $percentage) {
+  @return mix(#fff, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(#000, $color, $percentage);
+}

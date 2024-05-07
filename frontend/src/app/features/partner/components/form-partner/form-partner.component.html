@@ -1,0 +1,35 @@
+<div class="partner-wrapper">
+  <div class="container-title-icon-actions">
+    <div class="title-icon">
+      <i class="bi bi-plus"></i>
+      <span>New Partner</span>
+    </div>
+  </div>
+
+  <div class="card partner-container">
+    <ot-form-field label="Name">
+      <ot-input placeholder="name" data-flow="bottom"></ot-input>
+    </ot-form-field>
+
+    <div class="partner-row">
+      <ot-form-field class="w-full" label="Government ID">
+        <ot-input placeholder="government id"></ot-input>
+      </ot-form-field>
+
+      <ot-form-field class="select-country w-full" label="Country">
+        <div class="country-img" *ngIf="img.value && img.value !== 'null'">
+          <img height="20" width="20" [src]="img.value" />
+        </div>
+        <ot-select [formControl]="img">
+          <option *ngFor="let item of countries()" [value]="item.flag">
+            {{ item.code + " - " + item.name }}
+          </option>
+        </ot-select>
+      </ot-form-field>
+    </div>
+    <div class="partner-buttons">
+      <button class="btn btn-success">Save</button>
+      <a class="btn-link" routerLink="/partners">cancel</a>
+    </div>
+  </div>
+</div>

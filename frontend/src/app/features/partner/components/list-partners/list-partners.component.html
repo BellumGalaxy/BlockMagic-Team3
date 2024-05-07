@@ -1,0 +1,24 @@
+<div class="partner-grid-wrapper">
+  <div class="container-title-icon-actions">
+    <div class="title-icon">
+      <i class="bi bi-list"></i>
+      <span>List Partners</span>
+    </div>
+    <a class="btn-link" routerLink="new">
+      <i class="bi bi-plus"></i>
+      <span>New Partner</span>
+    </a>
+  </div>
+  <div class="partner-grid-content">
+    <div class="partner-grid-column">
+      <span>Name</span>
+      <span>Government ID</span>
+      <span>Country</span>
+    </div>
+    <div class="partner-grid-row" *ngFor="let item of partners()">
+      <span>{{ item.name }}</span>
+      <span>{{ item.governmentId }}</span>
+      <span>{{ item.country }}</span>
+    </div>
+  </div>
+</div>

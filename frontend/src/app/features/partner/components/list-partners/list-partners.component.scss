@@ -1,0 +1,41 @@
+@import 'variables';
+@import 'mixins';
+
+.partner {
+
+  &-grid-wrapper {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+  }
+
+  &-grid-content {
+   position: relative;
+
+    @include content-1;
+    background-color: $gray-2;
+  }
+
+  &-grid-column {
+    display: grid;
+    top: 0;
+    position: sticky;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgba($gray, 0.5);
+    padding: $padding-md;
+    backdrop-filter: blur(5px);
+
+  }
+
+  &-grid-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid $gray-3;
+    padding: $padding-md;
+
+    &:is(:last-child) {
+      border-bottom: none;
+    }
+
+  }
+}

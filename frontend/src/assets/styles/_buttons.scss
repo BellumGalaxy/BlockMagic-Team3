@@ -1,0 +1,157 @@
+:root {
+  --border-color: red;
+}
+
+$btn-states: success, danger;
+$btn-states-colors: $success, $danger;
+
+$btnThemes: (
+  "success": $success,
+  "danger": $danger,
+  "warn": $warn,
+);
+
+.btn {
+  --font-size-btn: 1rem;
+  $border-color: rgba(tint($primary, 50%), 30%);
+
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  align-items: center;
+  gap: 0.5rem;
+  // width: fit-content;
+  width: 100%;
+  font-size: var(--font-size-btn);
+  border-radius: 100rem;
+  border: none;
+  border: 1px solid $border-color;
+  padding: $padding-md;
+  padding-inline: $padding-lg;
+  background-color: tint($primary, 90%);
+  color: shade($primary, 30%);
+  cursor: pointer;
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $gray-3;
+    border: 1px solid shade($gray-3, 10%);
+    background-color: tint($gray-3, 87%);
+    color: $gray-3;
+  }
+  &:not(:disabled) {
+    &:hover {
+      border: 1px solid shade($primary, 10%);
+      background-color: tint($primary, 87%);
+    }
+
+    &:focus:not(:disabled) {
+      outline: 1px solid tint($primary, 10%);
+    }
+
+    &:active:not(:disabled) {
+      outline: 2px solid tint($primary, 10%);
+    }
+  }
+
+  // &-loading {
+  //   border-radius: 50px;
+  //   width: 34px;
+  //   left: calc(50vw - 25px);
+  //   color: transparent !important;
+  //   user-select: none;
+  //   white-space: nowrap;
+  //   pointer-events: none;
+
+  //   width: 34px;
+  //   height: 34px;
+  //   top: 8px;
+  //   box-sizing: border-box;
+  //   border-top: 4px solid inherit;
+  //   border-top-color: currentColor;
+  //   border-left: 4px solid transparent;
+  //   border-right: 4px solid transparent;
+  //   border-bottom: 4px solid transparent;
+  //   border-radius: 100%;
+  //   outline: 0.0005rem solid shade($primary, 10%);
+  //   animation: spin 0.6s ease-out infinite;
+
+  //   &::after {
+  //     width: 40px;
+  //     left: 5px;
+  //     top: 12px;
+  //     border-radius: 100%;
+  //   }
+  // }
+
+  @each $btnTheme, $i in $btnThemes {
+    &-#{$btnTheme} {
+      --border-color: #{$i};
+      border: 1px solid tint($i, 10%);
+      color: shade($i, 30%);
+      background-color: tint($i, 90%);
+      &:not(:disabled) {
+        &:hover {
+          border: 1px solid shade($i, 10%);
+          background-color: tint($i, 87%);
+        }
+
+        &:focus:not(:disabled) {
+          outline: 1px solid tint($i, 10%);
+        }
+
+        &:active:not(:disabled) {
+          outline: 2px solid tint($i, 10%);
+        }
+      }
+    }
+  }
+  .spinner {
+    width: 1.4rem;
+    height: 1.4rem;
+    // position: absolute;
+    // top: 8px;
+    // left: calc(50% - 17px);
+    background: transparent;
+    box-sizing: border-box;
+    border-top: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid transparent;
+    border-radius: 100%;
+    animation: spin 0.5s linear infinite;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.group-button {
+  display: flex;
+  gap: $gap-sm;
+  align-self: flex-end;
+}
+
+
+.btn-link {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  padding: $padding-sm;
+  border-radius: $radius;
+  user-select: none;
+  cursor: pointer;
+  font-size: 1rem;
+  &:hover {
+    background-color: rgba(39, 39, 39, 0.141);
+  }
+
+  > .bi {
+    font-size: 1.2rem;
+  }
+}

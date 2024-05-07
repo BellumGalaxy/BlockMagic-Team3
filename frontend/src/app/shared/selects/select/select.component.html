@@ -1,0 +1,13 @@
+<label>
+  @if (!!label) {
+  <span>{{ label() }}</span>
+  }
+  <select
+    aria-placeholder="Selecione"
+    [formControl]="control"
+    [required]="control.touched && control.invalid"
+  >
+    <option class="opt-default" [value]="null">selecione</option>
+    <ng-content select="option"></ng-content>
+  </select>
+</label>

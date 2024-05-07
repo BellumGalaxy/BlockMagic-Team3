@@ -1,0 +1,153 @@
+@import 'variables';
+@import 'mixins';
+
+.container {
+  --aside-width: 200px;
+  --aside-min-width: 200px;
+  display: grid;
+  // gap: 5px; 
+  grid-template-columns: minmax(var(--aside-min-width), var(--aside-width)) 1fr;
+  grid-template-rows: 3rem calc(100dvh - 3rem);
+  grid-template-areas:
+    "aside header"
+    "aside main"
+  ;
+
+  header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    padding: $padding-md;
+    justify-content: flex-end;
+
+    .profile {
+
+      &-info {
+        @include flex-ac;
+        gap: 0.3rem;
+      }
+
+      &-img {
+        >img {
+          height: 2rem;
+          width: 2rem;
+          border-radius: 100%;
+          border: 1px solid $gray-3;
+        }
+      }
+
+    }
+  }
+
+  main {
+    grid-area: main;
+    overflow: auto;
+    padding: $padding-md;
+    height: calc(100dvh - 3rem);
+    // background-color: green;
+
+    .main {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+  }
+
+
+  aside {
+    display: flex;
+    justify-content: flex-end;
+    grid-area: aside;
+    // background-color: red;
+    // padding-right: 0;
+    border-right: 1px solid var(--select-divider);
+
+    .aside-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: $padding-sm;
+      width: 250px;
+
+      .logo {
+        background-color: burlywood;
+        background-color: black;
+        padding: $padding-sm;
+        border-radius: 50rem;
+
+        >div {
+          display: flex;
+          align-items: center;
+          font-size: 1.5rem;
+          font-weight: 900;
+          background-color: black;
+          border-radius: 50rem;
+
+
+          >div {
+
+            height: max-content;
+
+            &:first-child {
+              height: max-content;
+              color: white;
+              padding-inline: $padding;
+            }
+
+            &:last-child {
+              height: max-content;
+              padding-inline: $padding;
+              background-color: white;
+              color: black;
+              border-radius: 2rem;
+              border-top-right-radius: 20rem;
+              border-bottom-right-radius: 20rem;
+            }
+          }
+        }
+      }
+
+
+
+      .menu-wrapper {
+        width: 100%;
+        flex: 1;
+
+        // background-color: blue;
+        .menu-item {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          margin-block: $margin-sm;
+          // width: fit-content;
+          padding: $padding-sm;
+          padding-inline: $padding-lg;
+          border-radius: 10rem;
+          background: transparent;
+          transition: all 0.250s;
+          cursor: pointer;
+
+          &:hover:not(.menu-active) {
+            background-color: $gray-1;
+            font-weight: 900;
+          }
+
+          >i {
+            font-size: 1.5rem;
+          }
+
+          >span {
+            text-transform: uppercase;
+          }
+        }
+
+        .menu-active {
+          background-color: $gray-2;
+          font-weight: 900;
+        }
+
+      }
+    }
+  }
+}

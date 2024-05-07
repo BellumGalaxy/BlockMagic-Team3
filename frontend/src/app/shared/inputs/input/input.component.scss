@@ -1,0 +1,59 @@
+@import "variables";
+
+div.input-wrapper {
+  position: relative;
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    > span {
+      margin-left: 0.5rem;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: black;
+    }
+  }
+  // input {
+  //   width: 100%;
+  //   height: fit-content;
+  //   background-color: $primary-10;
+  //   border: none;
+  //   border-radius: 2rem;
+  //   padding: $padding-md;
+  //   box-sizing: border-box;
+  //   color: shade($primary, 30%);
+
+  //   transition: outline-color 0.3s ease;
+
+  //   &::placeholder {
+  //     color: rgba($primary-60, 0.5);
+  //   }
+
+  //   &:active {
+  //     outline-color: $primary-70;
+  //   }
+
+  //   &:focus {
+  //     outline: 0.125rem solid;
+  //     outline-color: $primary-60;
+  //   }
+
+  //   // &:not(:placeholder-shown) {
+  //   //   outline: 0.125rem solid;
+  //   //   outline-color: $primary-60;
+  //   // }
+
+  //   &:invalid {
+  //     outline: 0.125rem solid;
+  //     outline-color: $color-danger;
+  //   }
+
+  //   &:disabled {
+  //     background-color: $gray-;
+  //     cursor: not-allowed;
+  //     &::placeholder {
+  //       color: #a2a2a2;
+  //     }
+  //   }
+  // }
+}

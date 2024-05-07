@@ -1,0 +1,197 @@
+@import 'variables';
+@import 'mixins';
+
+.home {
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &-profile-score {
+    display: flex;
+    gap: 1rem;
+
+    >.profile {
+      flex: 1;
+      @include content-1;
+
+    }
+
+    >.score {
+      flex: 1;
+      @include content-1;
+    }
+  }
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  @keyframes conic-effects {
+    to {
+      --angle: var(--v);
+    }
+  }
+
+  --rating-size: 4rem;
+  --bar-size: 0.35rem;
+  --background-color: #ffffff;
+  --rating-color-default: #e2e2e2;
+  --rating-color-background: #d2d2d2;
+  --rating-color-good: #27ae60;
+  --rating-color-meh: #f1c40f;
+  --rating-color-bad: #e74c3c;
+  --rating-color: #d2d2d2;
+
+  /* Rating item */
+  .rating {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    overflow: hidden;
+
+    background: var(--rating-color-default);
+    color: var(--rating-color-default);
+    width: var(--rating-size);
+    height: var(--rating-size);
+
+    /* Basic style for the text */
+    font-size: calc(var(--rating-size) / 4);
+    line-height: 1;
+
+    // background: conic-gradient(var(--rating-color) var(--v), transparent 0 100%);
+    background: conic-gradient(var(--rating-color-bad) 33%, var(--rating-color-meh) 66%, var(--rating-color-good) 100%);
+
+  }
+
+  /* Rating circle content */
+  .rating span {
+    position: relative;
+    display: flex;
+    font-weight: bold;
+    z-index: 2;
+    color: var(--rating-color);
+  }
+
+  .rating span small {
+    font-size: 0.5em;
+    font-weight: 900;
+    align-self: center;
+
+  }
+
+  /* Bar mask, creates an inner circle with the same color as thee background */
+  .rating::after {
+    content: "";
+    position: absolute;
+    inset: var(--bar-size);
+    background: var(--background-color);
+    border-radius: inherit;
+    z-index: 1;
+
+  }
+
+  /* Bar background */
+  .rating::before {
+    content: "";
+    position: absolute;
+    inset: var(--bar-size);
+    border-radius: inherit;
+    box-shadow: 0 0 0 1rem var(--rating-color-background);
+    z-index: -1;
+
+  }
+
+  /* Classes to give different colors to ratings, based on their score */
+  .rating.good {
+    --rating-color: var(--rating-color-good);
+    background: conic-gradient(var(--rating-color-bad) 33%, var(--rating-color-meh) 66%, var(--rating-color-good) var(--v), transparent var(--v));
+  }
+
+  .rating.meh {
+    --rating-color: var(--rating-color-meh);
+    background: conic-gradient(var(--rating-color-bad) 33%, var(--rating-color-meh) var(--v), transparent var(--v));
+  }
+
+  .rating.bad {
+    --rating-color: var(--rating-color-bad);
+    background: conic-gradient(var(--rating-color-bad) var(--v), transparent 33% 100%);
+  }
+
+
+
+}
+
+
+// wallet-grid
+.wallet {
+
+  &-grid-icon-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  &-grid-wrapper {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+  }
+
+  &-grid-content {
+   position: relative;
+
+    @include content-1;
+    background-color: $gray-2;
+  }
+
+  &-grid-column {
+    display: grid;
+    top: 0;
+    position: sticky;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgba($gray, 0.5);
+    padding: $padding-md;
+    backdrop-filter: blur(5px);
+
+  }
+
+  &-grid-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid $gray-3;
+    padding: $padding-md;
+
+    &:is(:last-child) {
+      border-bottom: none;
+    }
+
+   
+    .crypto-name {
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+    
+      &:hover {
+        --crypto-icon: var(--crypto-icon-color);
+      }  
+    
+      > div {
+        background-image: var(--crypto-icon);
+        height: 25px;
+        width: 25px;
+        
+      }
+    }
+  }
+
+  
+}
+

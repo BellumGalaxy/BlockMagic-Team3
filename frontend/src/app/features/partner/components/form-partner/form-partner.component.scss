@@ -1,0 +1,45 @@
+@import 'mixins';
+
+.partner {
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &-row {
+    @include flex-ac;
+  }
+
+  &-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+
+    > button {
+      flex-basis: 25%;
+    }
+  }
+  
+
+}
+
+.select-country {
+  position: relative;
+  
+  div.country-img {
+    position: absolute;
+    top: 55%;
+    left: 0.8rem;
+  }
+}
+
+
+ 

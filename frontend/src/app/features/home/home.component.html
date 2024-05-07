@@ -1,0 +1,75 @@
+<div class="home-wrapper">
+  <h1 class="title-header">Home</h1>
+  <div class="home-profile-score">
+    <div class="profile">
+      <div class="profile-pic">
+        <label class="-label" for="file">
+          <span>Change Image</span>
+        </label>
+        <input id="file" type="file" onchange="loadFile(event)" />
+        <img src="http://i.pravatar.cc/500?img=7" id="output" width="200" />
+      </div>
+      <div class="profile-text">
+        <span class="profile-name">Bruno Silva</span>
+        <small>0x3c4e6e41bd56254e81f2e37953ec610d3d7ca2fd</small>
+      </div>
+    </div>
+
+    <div class="score">
+      <h1>Score</h1>
+      <div class="rating good" style="--v: 89%">
+        <span> 100 </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wallet-grid-wrapper">
+    <div class="wallet-grid-icon-title">
+      <i class="icon bi bi-wallet2"></i>
+      <span>wallet</span>
+    </div>
+    <div class="wallet-grid-content">
+      <div class="wallet-grid-column">
+        <span>Token</span>
+        <span>Price</span>
+      </div>
+      <div
+        class="wallet-grid-row"
+        style="
+          --crypto-icon: url('../../../assets/images/svgs/cryptos/black/eth.svg');
+          --crypto-icon-color: url('../../../assets/images/svgs/cryptos/color/eth.svg');
+        "
+      >
+        <div class="crypto-name">
+          <div height="20"></div>
+          <span>ETH</span>
+        </div>
+        <span>$290.90</span>
+      </div>
+      <div
+        class="wallet-grid-row"
+        style="
+          --crypto-icon: url('../../../assets/images/svgs/cryptos/black/btc.svg');
+          --crypto-icon-color: url('../../../assets/images/svgs/cryptos/color/btc.svg');
+        "
+        *ngFor="let item of [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+      >
+        <div class="crypto-name">
+          <div height="20"></div>
+          <span>BTC</span>
+        </div>
+        <span>$290.90</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- <br
+    *ngFor="
+      let item of [
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+      ]
+    "
+  /> -->
+</div>

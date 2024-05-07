@@ -1,0 +1,94 @@
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .profile-pic {
+
+
+    $circleSize: 4rem;
+    $radius: 100px;
+    $shadow: 0 0 10px 0 rgba(255, 255, 255, .35);
+    $fontColor: rgb(250, 250, 250);
+
+    color: transparent;
+    transition: all .3s ease;
+    @include object-center;
+    position: relative;
+    transition: all .3s ease;
+
+    input {
+      display: none;
+    }
+
+    img {
+      position: absolute;
+      object-fit: cover;
+      width: $circleSize;
+      height: $circleSize;
+      box-shadow: $shadow;
+      border-radius: $radius;
+      z-index: 0;
+    }
+
+    .-label {
+      cursor: pointer;
+      height: $circleSize;
+      width: $circleSize;
+      font-size: 0.5rem;
+    }
+
+    &:hover {
+      .-label {
+        @include object-center;
+        background-color: rgba(0, 0, 0, .8);
+        z-index: 10000;
+        color: $fontColor;
+        transition: background-color .2s ease-in-out;
+        border-radius: $radius;
+        margin-bottom: 0;
+      }
+    }
+
+    span {
+      display: inline-flex;
+      padding: .2em;
+      height: 2em;
+    }
+
+    
+  }
+  &-text {
+    display: flex;
+    gap: 0.2rem;
+    flex-direction: column;
+  }
+
+  &-name {
+    font-weight: 900;
+  }
+}
+
+.w-full {
+  width: 100%;
+}
+
+h1.title-header {
+  margin-top: 0;
+}
+
+.container-title-icon-actions {
+  @extend .card;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .title-icon {
+    font-size: 1.2rem;
+    padding: $padding-sm;
+    > .bi {
+      font-size: 1.2rem;
+    }
+  }
+}

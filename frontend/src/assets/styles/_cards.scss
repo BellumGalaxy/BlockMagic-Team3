@@ -1,0 +1,17 @@
+.card {
+  --btn-like-width: 5.6rem;
+  width: 100%;
+  height: calc(100% - $padding-lg);
+  background-color: $gray;
+  border-radius: $radius-sm;
+  border: 1px solid transparent;
+  border-color: rgba($primary, 0.151);
+  content-visibility: auto;
+  transition: box-shadow 0.3s ease-in-out;
+  box-sizing: border-box;
+  padding: $padding-lg;
+
+  // &:hover {
+  //   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  // }
+}

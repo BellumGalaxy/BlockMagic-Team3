@@ -1,0 +1,45 @@
+<div class="container">
+  <header>
+    <div class="profile-info">
+      <div><span>Bruno Silva</span></div>
+      <div class="profile-img">
+        <img src="http://i.pravatar.cc/500?img=7" id="output" />
+      </div>
+    </div>
+  </header>
+  <aside>
+    <div class="aside-wrapper">
+      <a class="logo" href="#">
+        <div>
+          <div>Over</div>
+          <div>Trust</div>
+        </div>
+      </a>
+
+      <div class="menu-wrapper">
+        <a
+          class="menu-item"
+          routerLink="/"
+          routerLinkActive="menu-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <i class="bi-house"></i>
+          <span>Home</span>
+        </a>
+        <a
+          class="menu-item"
+          routerLink="/partners"
+          routerLinkActive="menu-active"
+        >
+          <i class="bi bi-building-add"></i>
+          <span>partners</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+  <main>
+    <div class="main">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>

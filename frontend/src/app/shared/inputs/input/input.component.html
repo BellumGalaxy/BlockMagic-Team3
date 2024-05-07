@@ -1,0 +1,37 @@
+<div class="input-wrapper">
+  <label>
+    @if (!!label) {
+    <span>{{ label }}</span>
+    } @if (type === 'money') {
+    <input
+      [formControl]="control"
+      [autocomplete]="autocomplete"
+      [type]="type"
+      [placeholder]="placeholder"
+      (blur)="markOnTouched()"
+      [required]="control.touched && control.invalid"
+      oaiCurrency
+    />
+    } @else {
+    <input
+      [formControl]="control"
+      [autocomplete]="autocomplete"
+      [type]="type"
+      [placeholder]="placeholder"
+      (blur)="markOnTouched()"
+      [required]="control.touched && control.invalid"
+    />
+    }
+  </label>
+</div>
+<!--input
+      [formControl]="control"
+      [autocomplete]="autocomplete"
+      [type]="type"
+      [placeholder]="placeholder"
+      (blur)="markOnTouched()"
+      [required]="control.touched && control.invalid"
+      [showMaskTyped]="false"
+      [shownMaskExpression]="null"
+      [mask]="mask"
+    /-->

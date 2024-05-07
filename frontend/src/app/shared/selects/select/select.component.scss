@@ -1,0 +1,59 @@
+@import "variables";
+select {
+  width: 100%;
+  height: fit-content;
+  background-color: $gray-2;
+  border: none;
+  border-radius: 2rem;
+  padding: $padding-md;
+  box-sizing: border-box;
+  color: shade(black, 30%);
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 50%;
+
+  transition: outline-color 0.3s ease;
+
+  &::placeholder {
+    color: rgba(0,0,0, 0.5);
+  }
+
+  &:active {
+    outline-color: black;
+  }
+
+  &:focus {
+    outline: 0.125rem solid;
+    outline-color: black;
+  }
+
+  // &:not(:placeholder-shown) {
+  //   outline: 0.125rem solid;
+  //   outline-color: $primary-60;
+  // }
+
+  &:invalid {
+    outline: 0.125rem solid;
+    outline-color: red;
+  }
+
+  &:disabled {
+    background-color: $gray-1;
+    cursor: not-allowed;
+    &::placeholder {
+      color: #a2a2a2;
+    }
+  }
+
+  
+}
+
+.opt-default {
+  color: #a2a2a2;
+}
+
