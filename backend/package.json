@@ -1,0 +1,18 @@
+{
+  "name": "over-trust",
+  "version": "0.0.0",
+  "description": "backend overtrust",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "blockmagic "
+  ],
+  "author": "dev",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.3"
+  }
+}
