@@ -13,8 +13,8 @@ app.use(express.urlencoded({ extended: true }));
 const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
-});
 
-app.get('/', (req, res) => {
-    res.end(`Server is running on port ${PORT}.`);
+  const eventListener = require('./src/OverTrustEvents.js');
+  eventListener.listenOffChainEvents();
+
 });

@@ -17,6 +17,7 @@
     "hardhat": "^2.22.3"
   },
   "dependencies": {
+    "@chainlink/contracts": "^1.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "ethers": "^6.12.1",

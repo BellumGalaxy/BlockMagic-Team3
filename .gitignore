@@ -1,3 +1,15 @@
 **/.DS_Store
 
 node_modules
+
+##################### solidity dev files ##############
+# Hardhat files
+/cache
+/artifacts
+
+# TypeChain files
+/typechain
+/typechain-types
+
+# Hardhat Ignition default folder for deployments against a local node
+ignition/deployments/chain-31337
