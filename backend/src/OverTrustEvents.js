@@ -1,7 +1,7 @@
 const { ethers } = require("ethers");
 
 const CONTRACT_ABI = require("../artifacts/contracts/abi/OverTrustFunctionsConsumer.json");
-const ADDRESS_TO_LISTEN = "0xA8cB519590Db42DB4B55D9116BE91dfB15eCC796";
+const ADDRESS_TO_LISTEN = "0x85F1Aba89aefc2E7f5e1D45B23d4E638945f70c8";
 const WS_PROVIDER = new ethers.WebSocketProvider("wss://avalanche-fuji.infura.io/ws/v3/36b33c566c834ab4bd001f38b774769c");
 
 
