@@ -31,5 +31,5 @@ Our team is proud to have achieved satisfactory frontend/backend/blockchain inte
 ## What we learned
 Our team learned the importance of mastering the technologies individually, understanding their pros and cons to be able to scale the most appropriate solutions to meet the demands of the project.
 
-## What's next for Untitled
+## What's next for Overtrust
 The next steps of our projects are to increase the backend features, Open Finance Data, and integrate RWA (Real World Assets) with the data that generates users' digital score ratings
