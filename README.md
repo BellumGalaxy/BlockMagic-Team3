@@ -35,5 +35,4 @@ Our team learned the importance of mastering the technologies individually, unde
 The next steps of our projects are to increase the backend features, Open Finance Data, and integrate RWA (Real World Assets) with the data that generates users' digital score ratings.
 
 ## Chainlink Usage
-Chainlink Cross-Chain Interoperability Protocol (CCIP)
-https://github.com/BellumGalaxy/BlockMagic-Team3/blob/main/backend/contracts/OverTrustCCIP.sol#L178
+Chainlink Cross-Chain Interoperability Protocol (CCIP): https://github.com/BellumGalaxy/BlockMagic-Team3/blob/main/backend/contracts/OverTrustCCIP.sol#L178
