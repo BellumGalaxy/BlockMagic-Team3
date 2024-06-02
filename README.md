@@ -14,7 +14,7 @@ Overtrust
 Our project aims to be the world's first digital score rating, cross-referencing data from users, banks, fintechs, and onchain and offchain data acquired through the Chainlink CCIP.
 
 ## Inspiration
-Our inspiration is given by the excellence of Chainlink CCIP in providing onchain and offchain data, together with the expertise of our team in the practices of financial institutions in the analysis of the profile of their customers, a world's first digital score rating proved to be the best project aligning Chainlink solutions and the experiences of our team.
+Our inspiration is given by the excellence of Chainlink Cross-Chain Interoperability Protocol (CCIP) in providing onchain and offchain data, together with the expertise of our team in the practices of financial institutions in the analysis of the profile of their customers, a world's first digital score rating proved to be the best project aligning Chainlink solutions and the experiences of our team.
 
 ## What it does
 Our project integrates frontend, backend, and blockchain to converge data from users, banks, fintechs, and onchain and offchain data into a digital score rating. On the frontend, the registration of operations, registration of data assignor, registration of partners, among others, are carried out. On the backend, frontend processes and web3 wallets (such as MetaMask) are integrated. On the blockchain, the offchain and onchain data required for the digital score rating is acquired and reported.
@@ -32,4 +32,8 @@ Our team is proud to have achieved satisfactory frontend/backend/blockchain inte
 Our team learned the importance of mastering the technologies individually, understanding their pros and cons to be able to scale the most appropriate solutions to meet the demands of the project.
 
 ## What's next for Overtrust
-The next steps of our projects are to increase the backend features, Open Finance Data, and integrate RWA (Real World Assets) with the data that generates users' digital score ratings
+The next steps of our projects are to increase the backend features, Open Finance Data, and integrate RWA (Real World Assets) with the data that generates users' digital score ratings.
+
+## Chainlink Usage
+Chainlink Cross-Chain Interoperability Protocol (CCIP)
+https://github.com/BellumGalaxy/BlockMagic-Team3/blob/main/backend/contracts/OverTrustCCIP.sol#L178
