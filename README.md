@@ -3,9 +3,7 @@
 <p align="center"> Chainlink BlockMagic Hackathon </p>
 
 ### Links
-- Link do pitch [Nome](link)
-- Link do site demo [Nome](link)
-- Link para a apresentação [Nome](link)
+- Pitch Link [Overtrust - Chainlink BlockMagic Hackathon](https://youtu.be/KIor0I9amyM)
 
 ## Project name
 Overtrust
