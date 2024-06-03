@@ -34,3 +34,4 @@ The next steps of our projects are to increase the backend features, Open Financ
 
 ## Chainlink Usage
 Chainlink Cross-Chain Interoperability Protocol (CCIP): https://github.com/BellumGalaxy/BlockMagic-Team3/blob/main/backend/contracts/OverTrustCCIP.sol#L178
+Chainlink Functions: https://github.com/BellumGalaxy/BlockMagic-Team3/blob/main/backend/contracts/OverTrustFunctionsConsumer.sol#L17
